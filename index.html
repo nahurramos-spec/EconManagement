@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EcoManagement | ODS 13 Acción por el Clima</title>
+        <link rel="icon" href="img/logotipo.png">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header id="inicio">
+            <div class="contenedor">
+                <img class="logo" src="img/logotipo.png" alt="Logotipo de EcoManagement" width="70">
+                <h1>EcoManagement</h1>
+                <p class="slogan">"Juntos construimos un futuro sostenible"</p>
+
+                <nav aria-label="Navegación principal">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#nosotros">Quiénes somos</a>
+                    <a href="#servicios">Servicios</a>
+                    <a href="#proyectos">Proyectos</a>
+                    <a href="#galeria">Galería</a>
+                    <a href="#testimonios">Testimonios</a>
+                    <a href="#contacto">Contáctanos</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <!-- PRESENTACIÓN -->
+            <section id="dashboard" class="seccion" aria-labelledby="titulo-inicio">
+                <div class="contenedor">
+                    <h2 id="titulo-inicio">Bienvenidos a EcoManagement</h2>
+                    <p class="subtitulo">
+                        Presentamos iniciativas tecnológicas e innovadoras vinculadas con nuestro Objetivo de Desarrollo Sostenible: ODS 13 Acción por el Clima.
+                    </p>
+                </div>
+            </section>
+
+            <!-- QUIÉNES SOMOS -->
+            <section id="nosotros" class="seccion">
+                <div class="contenedor">
+                    <h2>Quiénes somos</h2>
+                    <div class="contenido-flex">
+                        <img class="imagen-redondeada" src="img/equipo.jpg" alt="Equipo de EcoManagement enfocado en la acción climática" width="450">
+                        <div>
+                            <p>
+                                Somos un equipo de estudiantes de ingeniería comprometidos con la Acción por el Clima (ODS 13), enfocados en desarrollar soluciones digitales e inteligentes para medir, mitigar y reducir las emisiones de gases de efecto invernadero en nuestra comunidad universitaria.
+                            </p>
+                            <h3>Nuestra misión</h3>
+                            <p>
+                                Impulsar la conciencia y la mitigación del cambio climático mediante una plataforma digital que facilita el monitoreo de la huella de carbono, la gestión de tareas ecológicas y el soporte rápido a los usuarios.
+                            </p>
+                            <h3>Nuestra visión</h3>
+                            <p>
+                                Liderar la transición ecológica en el ámbito académico, convirtiéndonos en la plataforma de referencia para la gestión ambiental y la respuesta activa frente a la crisis climática global.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SERVICIOS -->
+            <section id="servicios" class="seccion">
+                <div class="contenedor">
+                    <h2>Servicios: Configurar Meta Ecológica</h2>
+                    <p class="subtitulo">Selecciona tus hábitos sostenibles y planifica tu impacto para reducir emisiones de CO2.</p>
+
+                    <div class="contenido-flex">
+                        <img class="imagen-redondeada" src="img/habitos-ecologicos.jpg" alt="Persona cargando botellas de plástico para reciclar" width="500">
+                        <div>
+                            <h3>Frecuencia de planificación</h3>
+                            <ul class="lista-planes">
+                                <li>Plan mensual</li>
+                                <li>Plan trimestral</li>
+                                <li>Plan anual</li>
+                            </ul>
+                            <div class="alerta-impacto">
+                                Reducción estimada de tu selección: <strong id="impacto-acciones">0 kg CO₂ / mes</strong>
+                                <progress id="progreso-acciones" value="0" max="15" aria-label="Reducción estimada respecto al catálogo completo"></progress>
+                                <small id="referencia-impacto">0 de 15 kg CO₂ / mes posibles en este catálogo.</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contenedor-formulario">
+                        <h3>Catálogo de Acciones Sostenibles</h3>
+                        <p>Filtrar por nivel: <strong>Todas</strong> | Fácil | Medio | Ambicioso</p>
+
+                        <form id="form-acciones" class="formulario-estilizado" aria-describedby="metodo-acciones">
+                            <fieldset id="catalogo-acciones">
+                                <legend>Elige tus acciones</legend>
+
+                                <div class="grupo-checkbox">
+                                    <input type="checkbox" id="a1" name="accion1" data-co2="2">
+                                    <label for="a1"><b>Bolsa reutilizable:</b> Usar bolsas de tela en las compras (reducción estimada: 2 kg CO₂ / mes)</label>
+                                </div>
+                                <div class="grupo-checkbox">
+                                    <input type="checkbox" id="a2" name="accion2" data-co2="3">
+                                    <label for="a2"><b>Ducharse en menos de 5 min:</b> Reducir tiempo de ducha (reducción estimada: 3 kg CO₂ / mes)</label>
+                                </div>
+                                <div class="grupo-checkbox">
+                                    <input type="checkbox" id="a3" name="accion3" data-co2="4">
+                                    <label for="a3"><b>Apagar luces:</b> Apagar luces al salir de habitaciones (reducción estimada: 4 kg CO₂ / mes)</label>
+                                </div>
+                                <div class="grupo-checkbox">
+                                    <input type="checkbox" id="a4" name="accion4" data-co2="6">
+                                    <label for="a4"><b>Compost doméstico:</b> Compostar residuos en casa (reducción estimada: 6 kg CO₂ / mes)</label>
+                                </div>
+
+                                <p id="contador-acciones" class="contador-acciones" role="status" aria-live="polite" aria-atomic="true"><b>0 de 4 seleccionadas · 0 kg CO₂ / mes</b></p>
+                                <div id="resumen-acciones" class="resumen-acciones" aria-labelledby="titulo-resumen">
+                                    <h4 id="titulo-resumen">Revisa tu selección antes de guardar</h4>
+                                    <p id="seleccion-vacia">Selecciona al menos una acción para ver su impacto estimado.</p>
+                                    <ul id="lista-acciones"></ul>
+                                    <p>Total estimado: <strong id="total-acciones">0 kg CO₂ / mes</strong></p>
+                                </div>
+                                <details class="metodo-acciones">
+                                    <summary>¿Cómo se calcula el impacto?</summary>
+                                    <p id="metodo-acciones">Sumamos los valores de las acciones seleccionadas: bolsa reutilizable (2), duchas cortas (3), apagar luces (4) y compost (6 kg CO₂ / mes). Usamos los valores ilustrativos del catálogo original y asumimos un mes de práctica habitual. No tienen una metodología ni una fuente validada en este proyecto. Son estimaciones orientativas, no mediciones reales; el resultado depende de la frecuencia, el consumo y el contexto. No se multiplican por los planes trimestral o anual.</p>
+                                </details>
+                                <p class="nota-acciones">Impacto estimado, no medido. Solo se guarda al confirmar, en este navegador y dispositivo.</p>
+                                <p id="estado-acciones">Sin acciones guardadas.</p>
+                                <div class="controles-acciones">
+                                    <button id="confirmar-acciones" type="submit" class="btn-proyecto" disabled>Selecciona acciones para continuar</button>
+                                    <button id="cancelar-acciones" type="button" class="boton-secundario" hidden>Cancelar cambios</button>
+                                    <button id="eliminar-acciones" type="button" class="boton-secundario" hidden>Eliminar acciones guardadas</button>
+                                    <button id="deshacer-acciones" type="button" class="boton-secundario" hidden>Deshacer eliminación</button>
+                                </div>
+                                <p id="mensaje-acciones" role="status" aria-live="polite" aria-atomic="true"></p>
+                                <noscript>Activa JavaScript para seleccionar y guardar tus acciones sostenibles.</noscript>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROYECTOS -->
+            <section id="proyectos" class="seccion">
+                <div class="contenedor">
+                    <h2>Proyectos</h2>
+                    <p class="subtitulo">
+                        Estas son las iniciativas activas vinculadas con el ODS 13 (Acción por el Clima) que se pueden monitorear desde la plataforma.
+                    </p>
+                    <img class="imagen-redondeada imagen-centrada" src="img/proyectos.jpg" alt="Árboles jóvenes plantados en un proyecto de reforestación urbana" width="450">
+
+                    <div class="filtros-proyectos">
+                        <button class="btn-filtro activo" data-filtro="todos">Todos</button>
+                        <button class="btn-filtro" data-filtro="En progreso">En progreso</button>
+                        <button class="btn-filtro" data-filtro="Completada">Completada</button>
+                        <button class="btn-filtro" data-filtro="Pendiente">Pendiente</button>
+                    </div>
+
+                    <div class="proyectos-grid">
+                        <article class="tarjeta-proyecto" data-estado="En progreso">
+                            <div class="contenido-tarjeta">
+                                <h3>Reforestación Urbana</h3>
+                                <span class="badge en-progreso">En progreso</span>
+                                <p>Categoría: Biodiversidad. Período: marzo a diciembre de 2026.</p>
+                                <div class="info-progreso">
+                                    <span>Avance: <strong class="texto-porcentaje">43%</strong> (3 de 7 hitos)</span>
+                                </div>
+                                <div class="barra-progreso"><div class="barra-progreso-fill" style="width: 43%;"></div></div>
+                                <div class="acciones-hito">
+                                    <button class="btn-sumar" type="button">+ Hito</button>
+                                    <button class="btn-restar" type="button">- Hito</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="tarjeta-proyecto" data-estado="En progreso">
+                            <div class="contenido-tarjeta">
+                                <h3>Energía Solar Corporativa</h3>
+                                <span class="badge en-progreso">En progreso</span>
+                                <p>Categoría: Energía. Período: enero a septiembre de 2026.</p>
+                                <div class="info-progreso">
+                                    <span>Avance: <strong class="texto-porcentaje">67%</strong> (4 de 6 hitos)</span>
+                                </div>
+                                <div class="barra-progreso"><div class="barra-progreso-fill" style="width: 67%;"></div></div>
+                                <div class="acciones-hito">
+                                    <button class="btn-sumar" type="button">+ Hito</button>
+                                    <button class="btn-restar" type="button">- Hito</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="tarjeta-proyecto" data-estado="En progreso">
+                            <div class="contenido-tarjeta">
+                                <h3>Gestión de Residuos Cero</h3>
+                                <span class="badge en-progreso">En progreso</span>
+                                <p>Categoría: Economía circular. Período: junio a diciembre de 2026.</p>
+                                <div class="info-progreso">
+                                    <span>Avance: <strong class="texto-porcentaje">20%</strong> (1 de 5 hitos)</span>
+                                </div>
+                                <div class="barra-progreso"><div class="barra-progreso-fill" style="width: 20%;"></div></div>
+                                <div class="acciones-hito">
+                                    <button class="btn-sumar" type="button">+ Hito</button>
+                                    <button class="btn-restar" type="button">- Hito</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- GALERÍA -->
+            <section id="galeria" class="seccion">
+                <div class="contenedor">
+                    <h2>Galería</h2>
+                    <p class="subtitulo">Conoce más sobre nuestras actividades e iniciativas vinculadas al ODS "Acción por el clima".</p>
+                    <div class="galeria-grid">
+                        <figure class="item-galeria">
+                            <img src="img/nosotros.webp" alt="Equipo trabajando en una maqueta de ciudad sostenible">
+                            <figcaption>Nosotros</figcaption>
+                        </figure>
+                        <figure class="item-galeria">
+                            <img src="img/servicio-misiones.png" alt="Pantalla de la plataforma con el progreso de misiones ecológicas">
+                            <figcaption>Servicios</figcaption>
+                        </figure>
+                        <figure class="item-galeria">
+                            <img src="img/proyecto-residuos.webp" alt="Botellas de plástico depositadas en contenedores de reciclaje">
+                            <figcaption>Proyectos</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="contenedor-video">
+                        <h3>Video institucional</h3>
+                        <video width="480" controls>
+                            <source src="videos/presentacion.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TESTIMONIOS -->
+            <section id="testimonios" class="seccion" aria-labelledby="titulo-testimonios">
+                <div class="contenedor">
+                    <h2 id="titulo-testimonios">Testimonios</h2>
+                    <p class="subtitulo">
+                        Conoce las experiencias de las personas que entrevistamos.
+                        Sus vivencias durante sismos, incendios y simulacros
+                        nos ayudaron a diseñar EvacuAcces, una solución de evacuación
+                        accesible para todos.
+                    </p>
+                    <div class="testimonios-grid">
+                        <article class="tarjeta-testimonio">
+                            <h3>Personas con discapacidad visual o auditiva</h3>
+                            <figure>
+                                <blockquote cite="https://youtu.be/MbXjB6ufMhI">
+                                    <p>Con las luces de emergencia veo halos y no puedo leer los letreros a distancia. Necesito instrucciones claras y simples para evacuar sin tropezar en las escaleras.</p>
+                                </blockquote>
+                                <figcaption>&mdash; <cite>Erick Cercedo</cite>, 19 años, estudiante con astigmatismo severo y miopía.</figcaption>
+                            </figure>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTACTO -->
+            <section id="contacto" class="seccion">
+                <div class="contenedor">
+                    <h2>Soporte / Consultas</h2>
+                    <p class="subtitulo">¿Necesitas ayuda con la plataforma EcoManagement? Nuestro equipo de soporte está listo para ayudarte, con un tiempo de respuesta estimado de menos de 20 minutos.</p>
+
+                    <div class="contenedor-formulario">
+                        <h3>Canales de atención directa</h3>
+                        <ul class="lista-planes">
+                            <li><strong>Correo de soporte:</strong> soporte@ecomanagement.org</li>
+                            <li><strong>Horario:</strong> Lunes a Viernes de 8:00 am a 6:00 pm</li>
+                        </ul>
+
+                        <h3>Resuelve tu consulta aquí</h3>
+                        <form id="form-contacto" class="formulario-estilizado" action="#" method="POST">
+                            <div class="campo">
+                                <label for="nombre">Nombre completo:</label>
+                                <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+                            </div>
+                            <div class="campo">
+                                <label for="correo">Correo electrónico para recibir la notificación:</label>
+                                <input type="email" id="correo" name="correo" placeholder="tu@correo.com" required>
+                            </div>
+                            <div class="campo">
+                                <label for="tipo">Elige el tipo de consulta:</label>
+                                <select id="tipo" name="tipo" required>
+                                    <option value="">Selecciona una opción...</option>
+                                    <option value="error">Error en mis actividades registradas</option>
+                                    <option value="progreso">Dudas sobre mi progreso</option>
+                                    <option value="metas">Problemas al configurar metas ecológicas</option>
+                                    <option value="otro">Otra consulta</option>
+                                </select>
+                            </div>
+                            <div class="campo">
+                                <label for="consulta">Detalle de la consulta:</label>
+                                <textarea id="consulta" name="consulta" rows="6" placeholder="Escribe tu consulta o describe el error que encontraste..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn-proyecto">Enviar</button>
+                        </form>
+
+                        <div id="mensaje-exito" role="status"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="pie-pagina">
+            <div class="contenedor">
+                <h2>Contacto y redes sociales</h2>
+                <p>Correo: contacto@eco.manag.pe</p>
+                <p>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a> |
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a> |
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a>
+                </p>
+                <p class="copyright">&copy; 2026 EcoManagement. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+
+        <!-- NOTIFICACIÓN FLOTANTE -->
+        <div id="notificacion-flotante" role="alert">
+            <div class="notificacion-contenido">
+                <strong>Notificación</strong>
+                <p id="texto-corto">Para solucionar tu inconveniente se necesita...</p>
+                <p id="texto-completo" style="display: none; margin-top: 8px;">
+                    Buenas, necesitas darle click a ver tareas para poder visualizar su barra de progresos. Espero que le haya sido de utilidad.
+                </p>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+        <script src="acciones.js"></script>
+    </body>
+</html>
